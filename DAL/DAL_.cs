@@ -16,7 +16,7 @@ namespace DAL
         {
             return new SqlConnection(ArmarCadena());
         }
-
+        
         private static string ArmarCadena()
         {
             string servidor = LeerServidor();
