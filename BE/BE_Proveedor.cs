@@ -8,24 +8,22 @@ namespace BE
 {
     public class BE_Proveedor
     {
-        string id_proveedor;
-        string nombre;
-        string apellido;
-        int dni;
-        int telefono;
-        string direccion;
+        public string Id_proveedor {  get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int Telefono { get; set; }
+        public string Direccion { get; set; }
 
         public BE_Proveedor() { }
-        public BE_Proveedor(string idProveedor, string _nombre, string _apellido, int _dni, int _telefono, string _direccion)
+        public BE_Proveedor(string idProveedor, string _nombre, string _apellido, int _telefono, string _direccion)
         {
-            id_proveedor = idProveedor;
-            nombre = _nombre;
-            apellido = _apellido;
-            dni = _dni;
-            telefono = _telefono;
-            direccion = _direccion;
+            Id_proveedor = idProveedor;
+            Nombre = _nombre;
+            Apellido = _apellido;
+            Telefono = _telefono;
+            Direccion = _direccion;
         }
-        public BE_Proveedor(object[] datos) : this(datos[0].ToString(), datos[1].ToString(), datos[2].ToString(), Convert.ToInt32(datos[3]), Convert.ToInt32(datos[4]), datos[5].ToString())
+        public BE_Proveedor(object[] datos) : this(datos[0].ToString(), datos[1].ToString(), datos[2].ToString(), Convert.ToInt32(datos[3]), (datos[4]).ToString())
         { }
     }
 }

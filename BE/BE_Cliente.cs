@@ -8,18 +8,18 @@ namespace BE
 {
     public class BE_Cliente
     {
-        string id_cliente;
-        string nombre;
-        string apellido;
-        int dni;
+        public string Id_cliente { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int Dni { get; set; }
 
         public BE_Cliente() { }
         public BE_Cliente(string idCliente, string _nombre, string _apellido, int _dni)
         {
-            id_cliente = idCliente;
-            nombre = _nombre;
-            apellido = _apellido;
-            dni = _dni;
+            Id_cliente = idCliente;
+            Nombre = _nombre;
+            Apellido = _apellido;
+            Dni = _dni;
         }
         public BE_Cliente(object[] datos) : this(datos[0].ToString(), datos[1].ToString(), datos[2].ToString(), Convert.ToInt32(datos[3]))
         { }

@@ -8,13 +8,13 @@ namespace BE
 {
     public class BE_Idioma
     {
-        string id_Idioma;
-        string nombre;
+        public string Id_Idioma { get; set; }
+        public string Nombre { get; set; }
         public BE_Idioma(string id, string pNombre)
         {
-            id_Idioma = id;
-            nombre = pNombre;
+            Id_Idioma = id;
+            Nombre = pNombre;
         }
-        public override string ToString() => nombre;
+        public override string ToString() => Nombre;
     }
 }

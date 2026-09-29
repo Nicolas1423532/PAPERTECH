@@ -1,13 +1,14 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class DAL_
+    public class DAL_
     {
         private const string ServidorPorDefecto = ".";
         private const string BaseDeDatos = "PAPERTECH";
@@ -16,7 +17,6 @@ namespace DAL
         {
             return new SqlConnection(ArmarCadena());
         }
-        
         private static string ArmarCadena()
         {
             string servidor = LeerServidor();
